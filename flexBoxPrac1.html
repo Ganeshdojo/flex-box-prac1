@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box Practice</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* header */
+        .header{
+            background-color: rgb(88, 185, 157);
+            text-align: center;
+            padding: 60px;
+            height: 250px;
+        }
+
+        /* navigation */
+        .navbar{
+            display: flex;
+            background-color: rgb(51, 51, 51);
+            text-align: center;
+        }
+        .navbar a{
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover{
+            background-color: rgb(222, 222, 222);
+            color: #000;
+        }
+
+        /* main content */
+        .row{
+            display: flex;
+        }
+        .side{
+            background-color: rgb(241, 241, 241);
+            flex: 40%;
+            padding: 30px;
+        }
+        .main{
+            padding: 30px;
+            flex: 60%;
+        }
+        .fakeimg{
+            background-color: rgb(170, 170, 170);
+        }
+        .side div, .main div{
+            padding: 20px;
+            font-weight: 600;
+        }
+        
+        /* footer */
+        .footer{
+            text-align: center;
+            padding: 30px;
+            background-color: rgb(221, 221, 221);
+        }
+
+        /* media queries */
+        @media screen and (max-width:700px){
+            .navbar{
+                flex-direction: column;
+            }
+            .row{
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- Note -->
+<div style="background:yellow;padding:5px">
+    <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+  </div>
+  
+  <!-- Header -->
+  <header class="header">
+    <h1>My Website</h1>
+    <p>With a <b>flexible</b> layout.</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </nav>
+  
+  <!-- Main content -->
+  <section class="row">
+    <aside class="side">
+      <h2>About Me</h2>
+      <h5>Photo of me:</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>More Text</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <div class="fakeimg" style="height:60px;">Image</div><br>
+      <div class="fakeimg" style="height:60px;">Image</div><br>
+      <div class="fakeimg" style="height:60px;">Image</div>
+    </aside>
+    <article class="main">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <br>
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </article>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Footer</h2>
+  </footer>
+</body>
+</html>
